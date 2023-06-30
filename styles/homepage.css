@@ -1,0 +1,245 @@
+@import url(./other/section-gradient.css);
+@import url(./other/service-cards.css);
+@import url(./other/clients-cards.css);
+@import url(./other/publications-cards.css);
+
+.z-1 {
+  position: relative;
+  z-index: 1;
+}
+
+body.dark .header {
+  color: var(--color-white);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+/***************************************/
+.wrap-tabs {
+  padding-top: var(--container-space);
+  flex-direction: column;
+  gap: var(--container-space);
+}
+.wrap {
+  overflow-x: auto;
+  margin: 0 -30px;
+  padding: 0 30px;
+}
+
+.wrap::-webkit-scrollbar {
+  display: none;
+}
+.wrap {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.nav-pills {
+  gap: 30px;
+}
+.nav-link {
+  font-size: 30px;
+  color: var(--text-color-gray);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: right;
+  white-space: nowrap;
+}
+.nav-link.active {
+  font-size: 30px;
+  color: var(--accent-color);
+  background: linear-gradient(90.13deg, #ef8080 0.84%, #f0145a 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.tab-title {
+  font-size: 20px;
+}
+.tabs-line {
+  background: rgba(255, 255, 255, 0.3);
+  height: 4px;
+  border: none;
+}
+/***************************************************/
+.first-screen {
+  background: url(../images/Symbol.png) no-repeat center/cover;
+  aspect-ratio: 375/600;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.first-screen-title {
+  font-size: 38px;
+  max-width: 315px;
+}
+.down {
+  position: absolute;
+  bottom: 30px;
+  z-index: 1;
+}
+.down:hover .svg-down {
+  stroke: var(--accent-color);
+}
+/**************************/
+.link-more {
+  color: var(--color-blue);
+  font-size: 14px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.link-more:hover .svg-more {
+  stroke: var(--accent-color);
+}
+/**************************/
+.section-publications {
+  background: var(--bg-color-gray);
+  padding-top: 30px;
+}
+.underline {
+  border: none;
+  height: 2px;
+  background-color: var(--separator-color-gray);
+}
+@media (min-width: 610px) {
+  .card-publication:last-of-type {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .card-publication-text:last-child {
+    max-width: 588px;
+  }
+}
+@media (min-width: 992px) {
+  .card-publication:last-of-type {
+    grid-column-start: initial;
+    grid-column-end: initial;
+  }
+  .card-publication-text:last-child {
+    max-width: initial;
+  }
+}
+/***********************/
+
+.section-slider {
+  padding-top: var(--container-space);
+  padding-bottom: var(--container-space);
+}
+.slick-initialized .slick-slide {
+  display: flex;
+}
+.slick-dots li button:before {
+  color: var(--color-blue);
+  opacity: 0.2;
+  font-size: 16px;
+}
+.slick-dots li.slick-active button:before {
+  color: var(--color-blue);
+  opacity: 1;
+}
+.card-slider {
+  flex-direction: column;
+  background: var(--bg-color-gray);
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+.team-img {
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+.slider-desc {
+  padding: 30px;
+}
+.slider-title .title {
+  margin-bottom: 30px;
+}
+.job {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  margin-top: 6px;
+}
+
+@media (min-width: 610px) {
+  .tab-title {
+    font-size: 30px;
+  }
+  .nav-pills .nav-link {
+    font-size: 38px;
+  }
+  .first-screen {
+    aspect-ratio: auto;
+    min-height: 100vh;
+    justify-content: center;
+  }
+  .first-screen-title {
+    max-width: max-content;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrap-tabs {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .wrap {
+    overflow-x: initial;
+    padding: 0;
+    margin: 12px 0 0;
+  }
+  .nav-pills {
+    flex-direction: column;
+  }
+  .tab-pane {
+    display: none;
+    height: 300px;
+    max-width: 405px;
+  }
+
+  .tabs-line {
+    height: initial;
+    width: 4px;
+  }
+  .first-screen {
+    background-size: contain;
+  }
+  .card-slider {
+    flex-direction: row;
+  }
+  .team-img {
+    height: initial;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 12px 0 0 12px;
+  }
+}
+
+@media (min-width: 1438px) {
+  .tab-pane {
+    height: 270px;
+    max-width: 582px;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1799px) {
+  .tab-pane {
+    height: 240px;
+    max-width: 862px;
+    margin-top: 60px;
+  }
+}

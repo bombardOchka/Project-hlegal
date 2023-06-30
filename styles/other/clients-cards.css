@@ -1,0 +1,92 @@
+.clients-title {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.clients-wrap {
+  height: 720px;
+  overflow-y: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1720px;
+}
+.clients-wrap::-webkit-scrollbar {
+  display: none;
+}
+.clients-wrap {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.card-client {
+  display: flex;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+}
+.card-client:nth-of-type(1) {
+  background: #1c4280;
+}
+.card-client:nth-of-type(2) {
+  background: #143646;
+}
+.card-client:nth-of-type(3) {
+  background: #f48b30;
+}
+.card-client:nth-of-type(4) {
+  background: #9e4dc3;
+}
+.card-client:nth-of-type(5) {
+  background: #fd9339;
+}
+.card-client:nth-of-type(6) {
+  background: #e2e2e4;
+}
+.card-client:nth-of-type(7) {
+  background: #c71c36;
+}
+.card-client:nth-of-type(8) {
+  background: #dcf3f9;
+}
+.card-client:nth-of-type(9) {
+  background: #eaeaea;
+}
+.card-client:nth-of-type(10) {
+  background: #282240;
+}
+.card-client:nth-of-type(11) {
+  background: #1d4568;
+}
+.card-client:nth-of-type(12) {
+  background: #000000;
+}
+
+@media (min-width: 610px) {
+  .clients-wrap {
+    height: initial;
+    overflow: initial;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .clients-wrap {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1700px) {
+  .section-clients {
+    padding-bottom: var(--container-space);
+  }
+  .card-client:nth-of-type(1) {
+    border-radius: 12px 0 0 0;
+  }
+  .card-client:nth-of-type(4) {
+    border-radius: 0 12px 0 0;
+  }
+  .card-client:nth-of-type(9) {
+    border-radius: 0 0 0 12px;
+  }
+  .card-client:nth-of-type(12) {
+    border-radius: 0 0 12px 0;
+  }
+}

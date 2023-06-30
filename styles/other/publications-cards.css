@@ -1,0 +1,36 @@
+.section-publications .card-wrapper {
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.card-publication {
+  border-radius: 8px;
+  flex-direction: column;
+  background-color: var(--color-white);
+}
+
+.publications-pic {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+.card-publication-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+}
+.card-publication-text {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(--color-black);
+  padding-top: 15px;
+  border-top: 4px solid var(--separator-color-gray);
+  max-width: 255px;
+}
+@media (min-width: 1438px) {
+  .card-publication-text {
+    max-width: inherit;
+  }
+}

@@ -1,0 +1,143 @@
+:root {
+  --container-width: 1360px;
+  --container-wide-width: 1600px;
+  --container-space: 30px;
+  --main-color: #323264;
+  --alt-main-color: #46466e;
+  --accent-color: #f0145a;
+  --color-blue: #24a3ff;
+  --bg-color-gray: #f5f5fa;
+  --text-color-gray: #b3b3ba;
+  --separator-color-gray: #e6e6f0;
+  --color-white: #ffffff;
+  --color-black: #000000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+html {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.22;
+  color: var(--main-color);
+  background-color: var(--bg-color-gray);
+}
+.container {
+  width: 100%;
+  max-width: calc(var(--container-width) + var(--container-space) * 2);
+  padding-left: var(--container-space);
+  padding-right: var(--container-space);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.container.wide {
+  max-width: calc(var(--container-wide-width) + var(--container-space) * 2);
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+.body {
+  background-color: var(--color-white);
+  position: relative;
+  z-index: 1;
+}
+.text-white {
+  color: var(--color-white);
+}
+.text-black {
+  color: var(--color-black);
+}
+.text-blue {
+  color: var(--color-blue);
+}
+.text-gray {
+  color: var(--text-color-gray);
+}
+.f-weight-400 {
+  font-weight: 400;
+}
+.size-12 {
+  font-size: 12px;
+}
+.size-14 {
+  font-size: 14px;
+}
+.size-19 {
+  font-size: 19px;
+  line-height: 30px;
+}
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.gap-10 {
+  gap: 10px;
+}
+.gap-15 {
+  gap: 15px;
+}
+.gap-30 {
+  gap: 30px;
+}
+.grid {
+  display: grid;
+}
+.grid .item-a {
+  grid-area: a;
+}
+.grid .item-b {
+  grid-area: b;
+}
+.grid .item-c {
+  grid-area: c;
+}
+.grid .item-d {
+  grid-area: d;
+}
+.grid .item-e {
+  grid-area: e;
+}
+.grid .item-f {
+  grid-area: f;
+  justify-content: center;
+}
+
+.hover-pink:hover {
+  color: var(--accent-color);
+}
+.space-1px {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.hidden {
+  display: none;
+}
+@media (min-width: 610px) {
+  :root {
+    --container-space: 60px;
+  }
+}
+@media (min-width: 1999px) {
+  :root {
+    --container-width: 1660px;
+    --container-wide-width: 1900px;
+  }
+}

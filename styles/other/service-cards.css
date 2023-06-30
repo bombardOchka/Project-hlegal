@@ -1,0 +1,36 @@
+.section-service {
+  padding-top: var(--container-space);
+  padding-bottom: var(--container-space);
+}
+.section-service .title {
+  margin-bottom: var(--container-space);
+}
+.card-service {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.service-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+  width: 92px;
+  background-color: var(--color-white);
+  border-radius: 24px;
+}
+.card-service-title {
+  font-size: 22px;
+  color: var(--color-blue);
+  margin-bottom: 15px;
+}
+.card-service-title:hover {
+  color: var(--accent-color);
+}
+.card-service-desc {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--color-white);
+}

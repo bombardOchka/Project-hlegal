@@ -1,0 +1,129 @@
+.contact-section {
+  padding-top: var(--container-space);
+  padding-bottom: var(--container-space);
+}
+.contact-section .container {
+  flex-direction: column;
+  gap: var(--container-space);
+  max-width: 1200px;
+}
+.logo-link:hover .fb-logo {
+  fill: var(--accent-color);
+}
+.logo-link:hover .link-contact {
+  color: var(--accent-color);
+}
+.contact-section .underline {
+  background-color: var(--separator-color-gray);
+  height: 4px;
+  border: none;
+}
+/*-----------*/
+@media (min-width: 992px) {
+  .contact-section .container {
+    flex-direction: row;
+  }
+  .contact-section .container .wrapper,
+  .contact-section .container .form-wrap {
+    width: 50%;
+  }
+}
+@media (min-width: 1799px) {
+  .contact-section .container {
+    max-width: calc(var(--container-width) + var(--container-space) * 2);
+  }
+}
+
+/*-----form-------*/
+
+.form-wrap {
+  padding: 30px;
+  background-color: var(--bg-color-gray);
+  border-radius: 12px;
+}
+
+.contact-title {
+  font-size: 30px;
+  background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.form-field {
+  line-height: 26px;
+  font-weight: 400;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--color-white);
+  border-radius: 8px;
+  background-color: var(--color-white);
+}
+textarea.form-field {
+  height: 130px;
+  resize: none;
+}
+.form-field:focus {
+  outline: none;
+  border-color: var(--color-blue);
+}
+.req:invalid,
+.req:invalid::placeholder {
+  color: #ff0000;
+}
+.req:invalid {
+  border-color: #ff0000;
+}
+/*------popup---------------------*/
+.popup-wrapper {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--alt-main-color);
+}
+.popup-wrapper.active {
+  display: flex;
+}
+.popup-window {
+  width: 100%;
+  max-width: 650px;
+  padding: 8px;
+}
+.popup-window .form-wrap {
+  position: relative;
+}
+.close {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  border-radius: 8px;
+}
+
+.close-line {
+  display: inline-block;
+  height: 2px;
+  width: 18px;
+  position: absolute;
+  top: 16px;
+  right: 7px;
+  background-color: #ec6f5d;
+}
+
+.close-line:first-child {
+  transform: rotate(45deg);
+}
+.close-line:last-child {
+  transform: rotate(-45deg);
+}
+
+.close:hover {
+  background-color: var(--separator-color-gray);
+  border-radius: 8px;
+}
